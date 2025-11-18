@@ -1,0 +1,183 @@
+/* Esta hoja se carga después de escritorio.css */
+/* Aquí solo agregamos estilos específicos para la pantalla de usuarios */
+
+/* ---------- Sección usuarios ---------- */
+.usuarios-section {
+  margin-top: 8px;
+}
+
+.usuarios-section h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Tarjetas de estadísticas ---------- */
+.usuarios-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  background: radial-gradient(circle at top left, #1d4ed8 0, #020617 70%);
+  border-radius: 16px;
+  padding: 12px 12px 14px;
+  border: 1px solid rgba(37, 99, 235, 0.6);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.7);
+}
+
+.stat-card h3 {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  font-size: 12px;
+  color: #cbd5f5;
+}
+
+/* ---------- Tabla de usuarios específica ---------- */
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: 9px 11px;
+  text-align: left;
+}
+
+/* Ajuste para que la tabla scrollee en pantallas pequeñas */
+.tabla-container {
+  overflow-x: auto;
+}
+
+/* ---------- Modal ---------- */
+.modal {
+  display: none; /* se muestra con JS */
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(15, 23, 42, 0.7);
+  padding: 20px 10px;
+}
+
+.modal-content {
+  background-color: #020617;
+  margin: 40px auto;
+  max-width: 520px;
+  border-radius: 18px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85);
+  padding: 18px 18px 20px;
+  color: #e5e7eb;
+}
+
+/* Header del modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.modal-header h2 {
+  font-size: 18px;
+}
+
+.modal-header .close {
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 6px;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+.modal-header .close:hover {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+/* ---------- Formulario dentro del modal ---------- */
+#modalRegistro .input-group label {
+  color: #e5e7eb;
+}
+
+#modalRegistro .input-group input,
+#modalRegistro .input-group select {
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #4b5563;
+}
+
+#modalRegistro .input-group input:focus,
+#modalRegistro .input-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+#modalRegistro .input-group small {
+  color: #9ca3af;
+}
+
+/* Mensaje dentro del modal */
+#modalRegistro .mensaje {
+  margin-top: 6px;
+}
+
+/* ---------- Botones del modal ---------- */
+.modal-buttons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancelar,
+.btn-guardar {
+  border-radius: 999px;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.08s, box-shadow 0.18s, filter 0.12s;
+}
+
+.btn-cancelar {
+  background: transparent;
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+}
+
+.btn-cancelar:hover {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+.btn-guardar {
+  background: #22c55e;
+  color: #022c22;
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4);
+}
+
+.btn-guardar:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .modal-content {
+    margin: 30px 8px;
+    padding: 14px 14px 16px;
+  }
+
+  .usuarios-stats {
+    grid-template-columns: 1fr;
+  }
+}
