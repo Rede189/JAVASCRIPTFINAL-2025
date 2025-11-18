@@ -1,4 +1,4 @@
-console.log("Proyecto listo 🚀");
+
 // Cargar usuarios del JSON y localStorage
 async function cargarUsuarios() {
   try {
